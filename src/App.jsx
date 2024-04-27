@@ -61,6 +61,11 @@ const App = () => {
         >
           {isSubmitting ? "Submitting" : "Submit"}
         </button>
+        {errors.root && (
+          <div>
+            <p className='text-red-600 my-4'>{errors.root.message}</p>
+          </div>
+        )}
       </form>
     </div>
   );
